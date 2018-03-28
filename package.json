@@ -9,6 +9,7 @@
 	"dependencies": {
 		"chokidar": "^2.0.3",
 		"command-line-args": "^5.0.2",
-		"fs-extra": "^5.0.0"
+		"fs-extra": "^5.0.0",
+		"lodash.defaultsdeep": "^4.6.0"
 	}
 }
