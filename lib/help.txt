@@ -1,7 +1,7 @@
 
 Usage: autospigot <command>
 
-Commands:
+Available Commands:
 	init [<target>]
 		Create a server environment or restore it's default configuration.
 		- target: Optional target directory. Default is the current working directory.
@@ -9,3 +9,6 @@ Commands:
 	start [<target>]
 		Start a server environment.
 		- target: Optional target directory. Default is the current working directory.
+
+	version
+		Show autospigot version information.
