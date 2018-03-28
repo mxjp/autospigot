@@ -66,3 +66,15 @@ autospigot run path/to/environment
 ### Minecraft EULA
 By running a server using autospigot you are indicating your agreement to Mojang's [Minecraft EULA](https://account.mojang.com/documents/minecraft_eula).<br>
 *AutoSpigot will automatically accept mojang's minecraft EULA when starting a server enrivonment the first time.*
+
+<br/>
+
+## Version check
+To get the autospigot version that is currently installed type:
+```bash
+autosigot version
+```
+To output something like:
+```
+autospigot v1.2.3 (MIT Licensed)
+```
