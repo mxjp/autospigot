@@ -1,0 +1,14 @@
+{
+	"name": "autospigot",
+	"version": "0.0.1",
+	"description": "SpigotMC rapid development tools",
+	"main": "lib",
+	"bin": "lib/index.js",
+	"author": "Max J. Polster",
+	"license": "MIT",
+	"dependencies": {
+		"chokidar": "^2.0.3",
+		"command-line-args": "^5.0.2",
+		"fs-extra": "^5.0.0"
+	}
+}
