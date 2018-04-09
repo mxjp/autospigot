@@ -1,6 +1,6 @@
 {
 	"name": "autospigot",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "SpigotMC rapid development tools",
 	"main": "lib",
 	"bin": "lib/index.js",
