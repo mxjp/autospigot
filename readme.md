@@ -30,7 +30,7 @@ autospigot init
 autospigot init path/to/environment
 ```
 
-### Configuration
+## Configuration
 The following is the default configuration stored in **autospigot.json** in your environment directory:
 ```json
 {
@@ -51,9 +51,8 @@ The following is the default configuration stored in **autospigot.json** in your
 + `serverArgs` - An array of additional arguments for the spigot server.
 
 > Note that fields that are not set in the configuration will fallback their defaults.<br/>
-> It is recommended to specify all fields explicitly to ensure consistency between different autospigot versions (even if the value is the default).
 
-### Running the server
+## Running the server
 To run a server environment type:
 ```bash
 # In the current directory:
@@ -63,18 +62,23 @@ autospigot run
 autospigot run path/to/environment
 ```
 
-### Minecraft EULA
+#### Additional arguments
+| Usage | Description |
+|-|-|
+| `--keep-alive` | Restart the server if it crashes or is stopped by something other than autospigot. |
+
+## Minecraft EULA
 By running a server using autospigot you are indicating your agreement to Mojang's [Minecraft EULA](https://account.mojang.com/documents/minecraft_eula).<br>
 *AutoSpigot will automatically accept mojang's minecraft EULA when starting a server enrivonment the first time.*
 
 <br/>
 
-## Version check
+# Version check
 To get the autospigot version that is currently installed type:
 ```bash
 autosigot version
 ```
 To output something like:
 ```
-autospigot v1.2.3 (MIT Licensed)
+autospigot v1.2.3 (<license name or path to license file> Licensed)
 ```
