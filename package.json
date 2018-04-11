@@ -1,7 +1,8 @@
 {
 	"name": "autospigot",
 	"version": "0.1.0",
-	"description": "SpigotMC rapid development tools",
+	"description": "SpigotMC server supervisor for development and production",
+	"repository": "github:mpt0/autospigot",
 	"main": "lib",
 	"bin": "cli/index.js",
 	"author": "Max J. Polster",

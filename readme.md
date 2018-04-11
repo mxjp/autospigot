@@ -1,8 +1,9 @@
 # AutoSpigot
-Spigot server for rapid plugin development!<br/>
+SpigotMC server supervisor for development and production.
 
 ## Status
-This is an early development version. Configuration and usage may change at any time!
+This is an early development version. Configuration and usage may change at any time!<br/>
+If you are reading this on github, keep in mind that cli and api documentation below may differ from the latest version that is published on npm!
 
 <br/>
 
@@ -46,11 +47,11 @@ autospigot init [--server|-s <directory>]
 
 ## Running a server
 ```bash
-autospigot start [--server|-s <directory>] [--keep-alive|-r] [--no-watch|-n]
+autospigot start [--server|-s <directory>] [--keep-alive|-r] [--watch|-w]
 ```
 + `--server | -s` - Specify the server directory.
 + `--keep-alive | -r` - Keep the server alive until the stop command is issued through autospigot input or autospigot is interrupted.
-+ `--no-watch | -n` - Do not watch plugins for changes.
++ `--watch | -w` - Watch plugins for changes.
 
 ## Version check
 ```bash

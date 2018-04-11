@@ -10,7 +10,7 @@ async function start(argv) {
 	const args = parse([
 		{name: 'server', alias: 's'},
 		{name: 'keep-alive', alias: 'r', type: Boolean},
-		{name: 'no-watch', alias: 'n', type: Boolean}
+		{name: 'watch', alias: 'w', type: Boolean}
 	], {argv});
 	const basedir = path.resolve(args.server || '.');
 	const config = await lib.config.load(basedir);
@@ -20,7 +20,7 @@ async function start(argv) {
 
 	const plugins = new lib.PluginManager({
 		pluginDir: path.join(config.data, 'plugins'),
-		watch: !args['no-watch']
+		watch: args.watch
 	});
 	plugins.addAll(config.plugins);
 	await plugins.updateAll();
