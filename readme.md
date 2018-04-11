@@ -9,6 +9,12 @@ If you are reading this on github, keep in mind that cli and api documentation b
 
 
 
+## Minecraft EULA
+By running a server using autospigot you are indicating your agreement to [Mojang's Minecraft EULA](https://account.mojang.com/documents/minecraft_eula).<br/>
+_AutoSpigot will automatically accept mojang's minecraft EULA when starting a server._
+
+
+
 # CLI
 ## Prequisites
 + Get your spigot server build as described [here](https://www.spigotmc.org/wiki/buildtools/)
