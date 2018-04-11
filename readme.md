@@ -4,81 +4,56 @@ Spigot server for rapid plugin development!<br/>
 ## Status
 This is an early development version. Configuration and usage may change at any time!
 
+<br/>
 
 
-# Installation
-### Prequisites
+
+# CLI
+## Prequisites
 + Get your spigot server build as described [here](https://www.spigotmc.org/wiki/buildtools/)
 + Install [nodejs](https://nodejs.org/en/)
 
-### Install using npm
+## Install using npm
 ```bash
 npm i -g autospigot
 ```
 
-<br/>
-
-
-
-# Usage
-AutoSpigot uses so called *server environments*. A server environment consists of an autospigot config and the serverdata. To create a new environment with a default configuration type:
-```bash
-# In the current directory:
-autospigot init
-
-# In a specific directory:
-autospigot init path/to/environment
-```
-
 ## Configuration
-The following is the default configuration stored in **autospigot.json** in your environment directory:
-```json
+Create an empty configuration file: `autospigot.json`
+```bash
+autospigot init [--server|-s <directory>]
+```
++ `--server | -s` - Specify the server directory.
+
+```js
 {
+	// The path to the server's data directory:
+	"data": "data",
+
+	// The path to the spigot executable:
 	"executable": "spigot.jar",
-	"workingDirectory": "server",
-	"pluginSources": [
-	],
-	"javaArgs": [
-	],
-	"serverArgs": [
-	]
+
+	// An array of plugin filenames to install and watch for changes:
+	"plugins": [],
+
+	// An array of additional java arguments:
+	"javaArgs": [],
+
+	// An array of additional server arguments:
+	"serverArgs": []
 }
 ```
-+ `executable` - Specifies the path to the spigot executable relative to the environment directory.
-+ `workingDirectory` - Specifies the working directory for the server relative to the environent directory.
-+ `pluginSources` - An array of plugin (.jar) paths to install and watch for changes.
-+ `javaArgs` - An array of additional arguments for the jvm.
-+ `serverArgs` - An array of additional arguments for the spigot server.
 
-> Note that fields that are not set in the configuration will fallback their defaults.<br/>
-
-## Running the server
-To run a server environment type:
+## Running a server
 ```bash
-# In the current directory:
-autospigot run
-
-# In a specific directory:
-autospigot run path/to/environment
+autospigot start [--server|-s <directory>] [--keep-alive|-r] [--no-watch|-n]
 ```
++ `--server | -s` - Specify the server directory.
++ `--keep-alive | -r` - Keep the server alive until the stop command is issued through autospigot input or autospigot is interrupted.
++ `--no-watch | -n` - Do not watch plugins for changes.
 
-#### Additional arguments
-| Usage | Description |
-|-|-|
-| `--keep-alive` | Restart the server if it crashes or is stopped by something other than autospigot. |
-
-## Minecraft EULA
-By running a server using autospigot you are indicating your agreement to Mojang's [Minecraft EULA](https://account.mojang.com/documents/minecraft_eula).<br>
-*AutoSpigot will automatically accept mojang's minecraft EULA when starting a server enrivonment the first time.*
-
-<br/>
-
-# Version check
-To get the autospigot version that is currently installed type:
+## Version check
 ```bash
-autosigot version
-```
-To output something like:
-```
-autospigot v1.2.3 (<license name or path to license file> Licensed)
+autospigot version
+# Outputs something like 'autospigot v1.2.3'
 ```
