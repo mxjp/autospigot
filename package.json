@@ -1,6 +1,6 @@
 {
 	"name": "autospigot",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "SpigotMC server supervisor for development and production",
 	"repository": "github:mpt0/autospigot",
 	"main": "lib",
